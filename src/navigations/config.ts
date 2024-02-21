@@ -1,8 +1,12 @@
 import { NavigatorScreenParams } from "@react-navigation/native";
 
 export type RootStackParams = {
-  Home: undefined;
-  Search: undefined;
-  Favourite: undefined;
-  Profile: undefined;
+  TabNav: undefined;
+};
+
+export type BottomTabsParams = {
+  Exercises: undefined;
+  Music: undefined;
+  Nutrition: undefined;
+  Pathological: undefined;
 };

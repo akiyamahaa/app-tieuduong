@@ -6,19 +6,10 @@ import { extendTheme } from "native-base";
 
 export const newColorTheme = {
   background: {
-    primary: "#EFFAFF",
-    secondary: "#BCEBFE",
-    white: "#fff",
-    grey: "rgba(226, 228, 232, 0.5)",
-    lightGrey: "rgba(216, 216, 216, 0.2)",
-    orange: "#FFE190",
+    primary: "#1761EB",
   },
   text: {
-    dark: "#3E5076",
-    light: "#96A5BA",
-    green: "#19EDBE",
-    red: "#DA282F",
-    iconLight: "#8b9ab1",
+    primary: "#1761EB",
   },
 };
 

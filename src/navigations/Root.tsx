@@ -5,7 +5,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ErrorOverlay from "../components/ErrorOverlay";
 import LoadingOverlay from "../components/LoadingOverlay";
 import { RootStackParams } from "./config";
-import Home from "../screens/Home";
+import TabNav from "./TabNav";
 
 const Stack = createNativeStackNavigator<RootStackParams>();
 
@@ -20,7 +20,7 @@ const Root = () => {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="TabNav" component={TabNav} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
