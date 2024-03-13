@@ -7,23 +7,31 @@ import store from "./src/store";
 import { useEffect } from "react";
 import {
   useFonts,
-  Quicksand_300Light,
-  Quicksand_400Regular,
-  Quicksand_500Medium,
-  Quicksand_600SemiBold,
-  Quicksand_700Bold,
-} from "@expo-google-fonts/quicksand";
+  LexendDeca_100Thin,
+  LexendDeca_200ExtraLight,
+  LexendDeca_300Light,
+  LexendDeca_400Regular,
+  LexendDeca_500Medium,
+  LexendDeca_600SemiBold,
+  LexendDeca_700Bold,
+  LexendDeca_800ExtraBold,
+  LexendDeca_900Black,
+} from "@expo-google-fonts/lexend-deca";
 import appTheme from "./src/theme";
 import Root from "./src/navigations/Root";
 
 SplashScreen.preventAutoHideAsync();
 export default function App() {
   let [fontsLoaded] = useFonts({
-    Quicksand_300Light,
-    Quicksand_400Regular,
-    Quicksand_500Medium,
-    Quicksand_600SemiBold,
-    Quicksand_700Bold,
+    LexendDeca_100Thin,
+    LexendDeca_200ExtraLight,
+    LexendDeca_300Light,
+    LexendDeca_400Regular,
+    LexendDeca_500Medium,
+    LexendDeca_600SemiBold,
+    LexendDeca_700Bold,
+    LexendDeca_800ExtraBold,
+    LexendDeca_900Black,
   });
 
   useEffect(() => {

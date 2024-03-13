@@ -3,11 +3,11 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Box, Text, VStack, useTheme } from "native-base";
 import { BottomTabsParams } from "./config";
-import Ionicons from "@expo/vector-icons/Ionicons";
-import Exercises from "../screens/Exercises";
-import Music from "../screens/Music";
-import Nutrition from "../screens/Nutrition";
-import Pathological from "../screens/Pathological";
+import Ionicons from "@expo/vector-icons/Ionicons"; 
+import Exercises from "../screens/exercise/Exercises";
+import Music from "../screens/music/Music";
+import Nutrition from "../screens/nutrition/Nutrition";
+import Pathological from "../screens/pathological/Pathological";
 
 const Tab = createBottomTabNavigator<BottomTabsParams>();
 
@@ -30,7 +30,7 @@ const TabNav = () => {
           tabBarIcon: ({ focused }) => (
             <VStack alignItems={"center"}>
               <Ionicons
-                name="notifications-outline"
+                name="barbell"
                 size={20}
                 color={
                   focused ? colors.background.primary : colors.coolGray[800]
@@ -41,34 +41,17 @@ const TabNav = () => {
                 fontWeight={400}
                 color={focused ? "text.primary" : colors.coolGray[800]}
               >
-                Đặt phòng của tôi
+                Bài tập
               </Text>
             </VStack>
           ),
-        }}
-      />
-      <Tab.Screen
-        name="Music"
-        component={Music}
-        options={{
-          tabBarIcon: ({ focused }) => (
-            <VStack alignItems={"center"}>
-              <Ionicons
-                name="notifications-outline"
-                size={20}
-                color={
-                  focused ? colors.background.primary : colors.coolGray[800]
-                }
-              />
-              <Text
-                fontSize={10}
-                fontWeight={400}
-                color={focused ? "text.primary" : colors.coolGray[800]}
-              >
-                Đặt phòng của tôi
-              </Text>
-            </VStack>
-          ),
+          headerShown: true,
+          title: "Bài tập dành cho bạn",
+          headerTitleStyle: {
+            color: "black",
+            fontSize: 16,
+            fontWeight: "500",
+          },
         }}
       />
       <Tab.Screen
@@ -78,7 +61,7 @@ const TabNav = () => {
           tabBarIcon: ({ focused }) => (
             <VStack alignItems={"center"}>
               <Ionicons
-                name="notifications-outline"
+                name="fitness"
                 size={20}
                 color={
                   focused ? colors.background.primary : colors.coolGray[800]
@@ -89,10 +72,48 @@ const TabNav = () => {
                 fontWeight={400}
                 color={focused ? "text.primary" : colors.coolGray[800]}
               >
-                Đặt phòng của tôi
+                Dinh dưỡng
               </Text>
             </VStack>
           ),
+          headerShown: true,
+          title: "Dinh Dưỡng ",
+          headerTitleStyle: {
+            color: "black",
+            fontSize: 16,
+            fontWeight: "500",
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Music"
+        component={Music}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <VStack alignItems={"center"}>
+              <Ionicons
+                name="musical-notes"
+                size={20}
+                color={
+                  focused ? colors.background.primary : colors.coolGray[800]
+                }
+              />
+              <Text
+                fontSize={10}
+                fontWeight={400}
+                color={focused ? "text.primary" : colors.coolGray[800]}
+              >
+                Nhạc thiền
+              </Text>
+            </VStack>
+          ),
+          headerShown: true,
+          title: "Nhạc thiền",
+          headerTitleStyle: {
+            color: "black",
+            fontSize: 16,
+            fontWeight: "500",
+          },
         }}
       />
       <Tab.Screen
@@ -102,7 +123,7 @@ const TabNav = () => {
           tabBarIcon: ({ focused }) => (
             <VStack alignItems={"center"}>
               <Ionicons
-                name="notifications-outline"
+                name="body"
                 size={20}
                 color={
                   focused ? colors.background.primary : colors.coolGray[800]
@@ -113,10 +134,17 @@ const TabNav = () => {
                 fontWeight={400}
                 color={focused ? "text.primary" : colors.coolGray[800]}
               >
-                Đặt phòng của tôi
+                Bệnh lý
               </Text>
             </VStack>
           ),
+          headerShown: true,
+          title: "Bệnh lý",
+          headerTitleStyle: {
+            color: "black",
+            fontSize: 16,
+            fontWeight: "500",
+          },
         }}
       />
     </Tab.Navigator>

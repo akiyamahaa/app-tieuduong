@@ -1163,6 +1163,11 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
+"@expo-google-fonts/lexend-deca@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/lexend-deca/-/lexend-deca-0.2.3.tgz#8dffbec512aceae0ba0d0cab48e5d223cee81f69"
+  integrity sha512-sNUZ/hz9W5IkX+/hM2ASlP2nGZ+JiWGL4ZOZxaMStFfTCBONAJg6AndWhYBE0al1GqrZvPMMw3Qw/OeiBoEvHQ==
+
 "@expo-google-fonts/quicksand@^0.2.3":
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/@expo-google-fonts/quicksand/-/quicksand-0.2.3.tgz#4838a1b380eefaa8478e63e6f113bd1b495c29d7"

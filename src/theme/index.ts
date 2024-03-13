@@ -6,7 +6,7 @@ import { extendTheme } from "native-base";
 
 export const newColorTheme = {
   background: {
-    primary: "#1761EB",
+    primary: "#3138EB",
   },
   text: {
     primary: "#1761EB",
@@ -16,28 +16,31 @@ export const newColorTheme = {
 const appTheme = extendTheme({
   colors: newColorTheme,
   fontConfig: {
-    Quicksand: {
+    LexendDeca: {
       300: {
-        normal: "Quicksand_300Light",
+        normal: "LexendDeca_300Light",
       },
       400: {
-        normal: "Quicksand_400Regular",
+        normal: "LexendDeca_400Regular",
       },
       500: {
-        normal: "Quicksand_400Regular",
+        normal: "LexendDeca_400Regular",
       },
       600: {
-        normal: "Quicksand_600SemiBold",
+        normal: "LexendDeca_600SemiBold",
       },
       700: {
-        normal: "Quicksand_700Bold",
+        normal: "LexendDeca_700Bold",
       },
+      800:{
+        normal: "LexendDeca_800ExtraBold"
+      }
     },
   },
   fonts: {
-    heading: "Quicksand",
-    body: "Quicksand",
-    mono: "Quicksand",
+    heading: "LexendDeca",
+    body: "LexendDeca",
+    mono: "LexendDeca",
   },
 });
 
