@@ -2,12 +2,14 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { Text, Box, HStack } from 'native-base'
 import ExerciseCard from './ExerciseCard'
+import { IExercise } from '../../../data/mockup'
 
 type Props = {
-  title:string
+  title: string
+  listExercises: IExercise[]
 }
 
-const ExerciseGroup = ({title}: Props) => {
+const ExerciseGroup = ({ title, listExercises }: Props) => {
   return (
     <Box>
       <HStack justifyContent={'space-between'} alignItems={'center'}>
@@ -19,10 +21,9 @@ const ExerciseGroup = ({title}: Props) => {
         </TouchableOpacity>
       </HStack>
       <HStack flexWrap={'wrap'} justifyContent={'center'}>
-        <ExerciseCard />
-        <ExerciseCard />
-        <ExerciseCard />
-        <ExerciseCard />
+        {listExercises.map((exercise) => (
+          <ExerciseCard exercise={exercise} key={exercise.id} />
+        ))}
       </HStack>
     </Box>
   )

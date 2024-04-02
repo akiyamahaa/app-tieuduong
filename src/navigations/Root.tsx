@@ -7,6 +7,7 @@ import LoadingOverlay from "../components/LoadingOverlay";
 import { RootStackParams } from "./config";
 import TabNav from "./TabNav";
 import ExercisesDetail from "../screens/exercise/ExercisesDetail";
+import MusicVideo from "../screens/music/MusicVideo";
 
 const Stack = createNativeStackNavigator<RootStackParams>();
 
@@ -32,8 +33,11 @@ const Root = () => {
               },
               headerTintColor: "black",
             }}
-
-
+          />
+                  <Stack.Screen name="MusicVideo" component={MusicVideo}
+            options={{
+              headerShown: false,
+            }}
           />
         </Stack.Navigator>
       </NavigationContainer>

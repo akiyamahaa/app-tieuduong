@@ -16,16 +16,16 @@ const CustomInput = ({ title, state, setState, unit, isGender = false }: Props) 
       <Text>{title}</Text>
       {isGender ?
         <Box maxW="300">
-          <Select selectedValue={state} minWidth="120" accessibilityLabel="Giới tính" placeholder="Giới tính" _selectedItem={{
+          <Select selectedValue={state} minWidth="120" accessibilityLabel="Trạng thái" placeholder="Trạng thái" _selectedItem={{
             bg: "teal.600",
             endIcon: <CheckIcon size="5" />
           }} mt={1} onValueChange={itemValue => setState(itemValue)}>
-            <Select.Item label="Nam" value="M" />
-            <Select.Item label="Nữ" value="F" />
+            <Select.Item label="Đã ăn" value="1" />
+            <Select.Item label="Chưa ăn" value="0" />
           </Select>
         </Box>
         : <HStack alignItems={'center'} space={2}>
-          <Input width={16} value={state} onChangeText={setState} />
+          <Input width={16} value={state} keyboardType='decimal-pad' onChangeText={setState} />
           <Text width={12}>{unit}</Text>
         </HStack>}
     </HStack>

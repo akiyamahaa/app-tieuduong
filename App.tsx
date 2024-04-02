@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { Box, NativeBaseProvider } from "native-base";
-import { StyleSheet, Text, View } from "react-native";
+import { LogBox, StyleSheet, Text, View } from "react-native";
 import { Provider } from "react-redux";
 import * as SplashScreen from "expo-splash-screen";
 import store from "./src/store";
@@ -19,6 +19,8 @@ import {
 } from "@expo-google-fonts/lexend-deca";
 import appTheme from "./src/theme";
 import Root from "./src/navigations/Root";
+
+
 
 SplashScreen.preventAutoHideAsync();
 export default function App() {
@@ -39,6 +41,10 @@ export default function App() {
       SplashScreen.hideAsync();
     }
   }, [fontsLoaded]);
+
+  useEffect(() => {
+    LogBox.ignoreLogs(['In React 18, SSRProvider is not necessary and is a noop. You can remove it from your app.']);
+  }, []);
 
   if (!fontsLoaded) {
     return null;
