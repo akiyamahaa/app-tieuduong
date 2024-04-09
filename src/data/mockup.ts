@@ -218,13 +218,27 @@ export interface IMusic {
 }
 
 export const musics: IMusic[] = [
-  {
-    id: 1,
-    image: 'https://phapam.daophatkhatsi.vn/images/nhac-thien.jpg',
-    title: 'Nhạc Thiền',
-    author: 'Pháp Âm',
-    url: '5FCcXCchXDk'
-  }
+    {
+      id: 1,
+      image: 'https://vnmedia2.monkeyuni.net/upload/web/img/nhac-thien-thai-giao-mp3-5.jpg',
+      title: 'Nhạc Thiền',
+      author: 'Nhạc Thiền Tịnh Tâm',
+      url: 'ciqJpsyWAB0'
+    },
+    {
+      id: 2,
+      image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjAgBfhieEDvW7Y7WFVd66-chmz_c8OQ072qxQsDv1jRJGBSgciimXCG2Z7INQbl1q3DpDSWPVBjHUdpkwomrJki1TgB42P_TXp8fNFxznuu5YwG0J6rTaCTfUzeYm7bsU-f3syEvIh0sw/s640/nha-su-can-nghe-nhac-thien-tinh-tam-chang-031219.jpg',
+      title: 'Nhạc Thiền',
+      author: 'Nguyễn Duy Giang',
+      url: '-FE5ezwmHKo'
+    },
+    {
+      id: 3,
+      image:'https://loiphong.vn/uploaded/10.GOC-TU-VAN/109.nhac-thien/Nhac-thien-1.jpg',
+      title: 'Nhạc Thiền',
+      author: 'Live Well',
+      url: 'r3gRcVd1swk'
+    },
 ]
 
 

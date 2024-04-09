@@ -3,45 +3,37 @@ import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useRoute } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import YoutubePlayer from "react-native-youtube-iframe";
-import { formatYoutubeLink } from "../../data/function";
+import { Box } from "native-base";
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
 
 const MusicVideo = () => {
 	const route = useRoute<any>();
-  const {url} = route.params
-  console.log("🚀 ~ MusicVideo ~ url:", url)
+	const { url } = route.params
 
 	return (
-		<View style={styles.container}>
+		<Box style={{ transform: [{ rotate: "90deg" }] }}>
 			<StatusBar hidden />
 			<YoutubePlayer
 				videoId={url}
 				width={windowHeight}
 				height={windowWidth}
-				// prevent aspect ratio auto sizing
+				webViewProps={{
+					injectedJavaScript: `
+            var element = document.getElementsByClassName('container')[0];
+            element.style.position = 'unset';
+            element.style.paddingBottom = 'unset';
+            true;
+          `,
+				}}
+			// prevent aspect ratio auto sizing
 			/>
-		</View>
+		</Box>
 	);
 };
 
 export default MusicVideo;
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		justifyContent: "center",
-		alignItems: "center",
-		backgroundColor: "#000",
-		transform: "rotate(90deg)",
-	},
-	buttons: {
-		width: 100,
-		height: 50,
-	},
-	video: {
-		width: windowHeight,
-		height: windowWidth,
-	},
 });
